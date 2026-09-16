@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LohjaByte Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR (Tu línea azul) -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="contacto.html">Contactanos</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="banda.html">Banda Asociada 🎸</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- TÍTULO PRINCIPAL (Tus letras moradas) -->
+    <main>
+        <main>
+        <!-- SECCIÓN PRINCIPAL CON VIDEO DE FONDO -->
+        <section id="inicio" class="hero-video">
+            
+            <!-- Aquí irá tu video de los ojos rojos. 
+                 autoplay loop muted = se reproduce solo, se repite y empieza en silencio -->
+            <video autoplay loop muted playsinline class="video-fondo" id="miVideo">
+                <source src="ojos-rojos.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Tu efecto de sonido del arma y el monstruo -->
+            <audio id="miAudio">
+                <source src="grito-arma.mp3" type="audio/mpeg">
+            </audio>
+
+            <!-- TODO LO QUE VA CENTRADO (Tu apunte azul) -->
+            <div class="contenido-centrico">
+                <img src="Lohjabyte.png" alt="LohjaByte Studio Logo" class="logo-principal">
+                <h2>Desarrollo, Diseño y Tecnología</h2>
+                
+                <!-- El botón para activar la atmósfera -->
+                <button onclick="activarExperiencia()" class="btn-experiencia">Iniciar Experiencia 🔊</button>
+
+                <!-- La presentación pegada justo debajo como querías -->
+                <div class="presentacion-centrada">
+                    <h3>Presentación</h3>
+                    <p>Hola,somos un estudio pequeño,estamos tratando de darnos a conocer y pues les agradecemos mucho que hayan entrado a nuestra web, esta pagina se irá mejorando conforme vayamos avanzando mas. </p>
+                    <p>Estamos en desarrollo de un nuevo videojuego que esperamos pueda llegar a gustarles, lamentablemente el tiempo de desarrollo será algo largo pero esperamos traeles un juegon mecanicas,graficos que puedan disfrutar de ver y una historia que ojalá les llegue a gustar en la parte de arriba tendran 3 apartados, 1 es de un grupo musical el cual esperamos puedan seguir y si es posible les llegue a gustar por favor visiten ese apartado, de ahí tenemos el apartado de donaciones en el cual pues su nombre lo dice son donaciones que nos servira para ciertos gastos del desarrollo, y por último está el apartado de proyectos donde estaremos subiendo imagenes de avances del juego, videos o canciones. Agradecemos mucho la atenció y pedimos disculpas por nuestra rústica web. </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE IMÁGENES / ADELANTOS -->
+        <section id="proyectos" class="seccion-oscura">
+            </div>
+        </section>
+    </main>
+
+    <!-- Un pequeñísimo código para que el botón reproduzca el audio -->
+    <script>
+        function activarExperiencia() {
+            var audio = document.getElementById("miAudio");
+            audio.play();
+            // Ocultamos el botón después de darle clic para que se vea limpio
+            document.querySelector('.btn-experiencia').style.display = 'none';
+        }
+    </script> 
+    </main>
+
+</body>
+</html>
