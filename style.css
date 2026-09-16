@@ -310,3 +310,44 @@ nav a:hover {
     75%  { content: '...'; }
     100% { content: ''; }
 }
+/* --- MODO CELULAR (DISEÑO RESPONSIVO) --- */
+@media screen and (max-width: 768px) {
+    /* Si usaste un contenedor flex para la banda, esto lo apilará verticalmente */
+    div {
+        flex-direction: column !important;
+    }
+
+    /* Hacemos que la foto de la banda y el QR no se salgan de la pantalla */
+    img, .foto-banda {
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 10px auto !important;
+    }
+
+    /* Le damos espacio a los lados para que el texto no toque las orillas */
+    body {
+        padding: 10px !important;
+    }
+
+    /* Reducimos el tamaño de las marcas de agua gigantes para que no estorben */
+    h1, h2 {
+        font-size: 2rem !important;
+        text-align: center !important;
+    }
+}
+/* --- ESTILO PARA EL ENLACE DE INSTAGRAM --- */
+.enlace-directo {
+    color: #33ccff; /* Azul neón brillante */
+    font-weight: bold;
+    text-decoration: none; 
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 15px; 
+    transition: all 0.3s ease;
+}
+
+/* Brillo al pasar el dedo/mouse */
+.enlace-directo:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #33ccff;
+}
