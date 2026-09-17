@@ -312,63 +312,62 @@ nav a:hover {
 }
 /* --- MODO CELULAR (DISEÑO RESPONSIVO) --- */
 @media screen and (max-width: 768px) {
-    /* 4. Arreglar el traslape del logo en la página principal */
-    .logo-principal {
-        margin-top: 0 !important;
-        margin-bottom: 20px !important;
+    
+    /* 1. Ajuste de espacios y márgenes negativos del logo */
+    .hero-video {
+        padding-top: 20px !important; 
     }
 
-    /* 5. Forzar el color brillante del enlace de Instagram */
+    .logo-principal {
+        margin-top: -50px !important;    
+        margin-bottom: -60px !important; 
+    }
+
+    /* 2. Color brillante del enlace de Instagram */
     .enlace-directo {
         color: #33ccff !important;
     }
-}
-    
-    /* 1. ARREGLO DEL FONDO "OTANIC" */
+
+    /* 3. Fondo "OTANIC" */
     .pagina-banda {
-        background-size: 100% auto !important; /* Fuerza a que la imagen se adapte al ancho del celular sin cortarse */
-        background-position: top center !important; /* Lo alinea hacia arriba para que quede detrás del logo/QR */
+        background-size: 100% auto !important;
+        background-position: top center !important;
     }
 
-    /* 2. ARREGLO DEL PÓSTER Y EL TEXTO (Para que se apilen) */
+    /* 4. Apilar texto y póster de la banda */
     .presentacion-banda {
-        flex-direction: column !important; /* Pone el poster debajo del texto */
+        flex-direction: column !important;
         padding: 30px 20px !important;
         text-align: center !important;
     }
 
-    /* Que el texto ocupe toda la pantalla y no se quede aplastado en la mitad */
     .texto-banda {
         max-width: 100% !important; 
     }
 
-    /* Tamaño y margen del póster en móvil */
     .poster-secundario img {
         max-width: 90% !important; 
         margin-top: 30px !important;
     }
 
-    /* 3. QUITAR ESPACIOS EN BLANCO INNECESARIOS */
+    /* 5. Menú y espacios generales */
     header {
-        padding: 15px 20px !important; /* Menú más compacto */
+        padding: 15px 20px !important;
     }
     
-    /* Centramos el menú superior de botones para que no se salga de la pantalla */
     nav ul {
         justify-content: center !important; 
         gap: 15px !important;
         padding: 0;
     }
 
-    /* Reducimos la caja del QR para que no empuje todo hacia abajo */
     .hero-banda {
         height: auto !important;
         padding: 40px 20px !important;
     }
 
-    /* Arreglos de tamaño de letra generales */
     h1, h2 {
         font-size: 2rem !important;
         text-align: center !important;
     }
-}                            
+}
