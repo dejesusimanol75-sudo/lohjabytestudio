@@ -312,42 +312,52 @@ nav a:hover {
 }
 /* --- MODO CELULAR (DISEÑO RESPONSIVO) --- */
 @media screen and (max-width: 768px) {
-    /* Si usaste un contenedor flex para la banda, esto lo apilará verticalmente */
-    div {
-        flex-direction: column !important;
+    
+    /* 1. ARREGLO DEL FONDO "OTANIC" */
+    .pagina-banda {
+        background-size: 100% auto !important; /* Fuerza a que la imagen se adapte al ancho del celular sin cortarse */
+        background-position: top center !important; /* Lo alinea hacia arriba para que quede detrás del logo/QR */
     }
 
-    /* Hacemos que la foto de la banda y el QR no se salgan de la pantalla */
-    img, .foto-banda {
-        max-width: 100% !important;
+    /* 2. ARREGLO DEL PÓSTER Y EL TEXTO (Para que se apilen) */
+    .presentacion-banda {
+        flex-direction: column !important; /* Pone el poster debajo del texto */
+        padding: 30px 20px !important;
+        text-align: center !important;
+    }
+
+    /* Que el texto ocupe toda la pantalla y no se quede aplastado en la mitad */
+    .texto-banda {
+        max-width: 100% !important; 
+    }
+
+    /* Tamaño y margen del póster en móvil */
+    .poster-secundario img {
+        max-width: 90% !important; 
+        margin-top: 30px !important;
+    }
+
+    /* 3. QUITAR ESPACIOS EN BLANCO INNECESARIOS */
+    header {
+        padding: 15px 20px !important; /* Menú más compacto */
+    }
+    
+    /* Centramos el menú superior de botones para que no se salga de la pantalla */
+    nav ul {
+        justify-content: center !important; 
+        gap: 15px !important;
+        padding: 0;
+    }
+
+    /* Reducimos la caja del QR para que no empuje todo hacia abajo */
+    .hero-banda {
         height: auto !important;
-        margin: 10px auto !important;
+        padding: 40px 20px !important;
     }
 
-    /* Le damos espacio a los lados para que el texto no toque las orillas */
-    body {
-        padding: 10px !important;
-    }
-
-    /* Reducimos el tamaño de las marcas de agua gigantes para que no estorben */
+    /* Arreglos de tamaño de letra generales */
     h1, h2 {
         font-size: 2rem !important;
         text-align: center !important;
     }
-}
-/* --- ESTILO PARA EL ENLACE DE INSTAGRAM --- */
-.enlace-directo {
-    color: #33ccff; /* Azul neón brillante */
-    font-weight: bold;
-    text-decoration: none; 
-    font-size: 1.1rem;
-    display: inline-block;
-    margin-top: 15px; 
-    transition: all 0.3s ease;
-}
-
-/* Brillo al pasar el dedo/mouse */
-.enlace-directo:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #33ccff;
 }
