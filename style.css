@@ -312,6 +312,17 @@ nav a:hover {
 }
 /* --- MODO CELULAR (DISEÑO RESPONSIVO) --- */
 @media screen and (max-width: 768px) {
+    /* 4. Arreglar el traslape del logo en la página principal */
+    .logo-principal {
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 5. Forzar el color brillante del enlace de Instagram */
+    .enlace-directo {
+        color: #33ccff !important;
+    }
+}
     
     /* 1. ARREGLO DEL FONDO "OTANIC" */
     .pagina-banda {
@@ -360,4 +371,4 @@ nav a:hover {
         font-size: 2rem !important;
         text-align: center !important;
     }
-}
+}                            
